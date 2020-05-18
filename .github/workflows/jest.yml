@@ -1,19 +1,20 @@
-# NPMの動作確認
-name: NPM
+# JestをGitHub Actionsで実行する
+name: Jest
 
 on: [push] # git push したときに実行する
 
 jobs:
-  npm:
-    name: NPM
+  jest:
+    name: Jest
     runs-on: ubuntu-latest # Ubuntuの最新版を実行環境とする
     steps:
+      # https://github.com/actions/checkout
+      - uses: actions/checkout@v2
       # https://github.com/actions/setup-node
       - uses: actions/setup-node@v1
         with:
           node-version: '12' # Node 12を使う
-      - run: node -v
-      - run: which npm
-      - run: npm --version
-      - run: which yarn
-      - run: yarn --version
+      - name: Dependencies
+        run: yarn
+      - name: Jest
+        run: yarn jest

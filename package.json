@@ -1,0 +1,11 @@
+{
+  "name": "github-actions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:suin/github-actions-playground.git",
+  "author": "suin <suinyeze@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
