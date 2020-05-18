@@ -1,0 +1,19 @@
+# NPMの動作確認
+name: NPM
+
+on: [push] # git push したときに実行する
+
+jobs:
+  npm:
+    name: NPM
+    runs-on: ubuntu-latest # Ubuntuの最新版を実行環境とする
+    steps:
+      # https://github.com/actions/setup-node
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12' # Node 12を使う
+      - run: node -v
+      - run: which npm
+      - run: npm --version
+      - run: which yarn
+      - run: yarn --version
