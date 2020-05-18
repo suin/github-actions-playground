@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest # Ubuntuの最新版を実行環境とする
     steps:
       - name: Say Hello World
-        run: echo "Hello World!"
+        run: echo "Hello World!" # シェルで実行するコマンド
